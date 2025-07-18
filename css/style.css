@@ -1,3 +1,37 @@
+/* Add this at the top of your CSS */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Update the container class */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Match this with main max-width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Center the header content */
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Consistent with other containers */
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
 /* ===== Base Styles ===== */
 :root {
     --primary-color: #4285f4;
