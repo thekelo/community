@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Connect | About</title>
+    <title>Community Connect | Create Post</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,7 +22,7 @@
                     <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="posts.html"><i class="fas fa-comments"></i> Posts</a></li>
                     <li><a href="members.html"><i class="fas fa-users"></i> Members</a></li>
-                    <li class="active"><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                 </ul>
             </nav>
             <div class="auth-buttons" id="authButtons">
@@ -43,64 +43,38 @@
         </div>
     </header>
 
-    <main class="container about-page">
-        <section class="about-hero">
-            <h1>About Community Connect</h1>
-            <p class="subtitle">Bringing people together through shared interests and meaningful conversations</p>
-        </section>
-
-        <section class="about-content">
-            <div class="about-section">
-                <h2><i class="fas fa-rocket"></i> Our Mission</h2>
-                <p>Community Connect was founded with the goal of creating a space where people can come together to share ideas, ask questions, and build relationships around common interests. We believe in the power of community to inspire, educate, and support its members.</p>
+    <main class="container create-post-page">
+        <h1><i class="fas fa-plus-circle"></i> Create New Post</h1>
+        
+        <form id="postForm">
+            <div class="form-group">
+                <label for="postTitle">Post Title</label>
+                <input type="text" id="postTitle" placeholder="Enter a title for your post" required>
             </div>
-
-            <div class="about-section">
-                <h2><i class="fas fa-history"></i> Our Story</h2>
-                <p>Started in 2023, Community Connect began as a small project among friends who wanted a better way to stay connected. What began as a simple forum quickly grew into a thriving community platform with members from around the world.</p>
-                <p>Today, we're proud to host thousands of discussions and help people make meaningful connections every day.</p>
+            
+            <div class="form-group">
+                <label for="postContent">Post Content</label>
+                <textarea id="postContent" rows="8" placeholder="Write your post content here..." required></textarea>
             </div>
-
-            <div class="about-section">
-                <h2><i class="fas fa-users"></i> Our Community</h2>
-                <p>Our members are at the heart of everything we do. We're home to:</p>
-                <ul class="community-stats">
-                    <li><strong><span id="aboutMemberCount">0</span>+ members</strong> from around the world</li>
-                    <li><strong><span id="aboutPostCount">0</span>+ discussions</strong> on countless topics</li>
-                    <li><strong>24/7 active community</strong> with new content daily</li>
-                </ul>
-            </div>
-
-            <div class="about-section team-section">
-                <h2><i class="fas fa-user-friends"></i> Meet the Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="images/team1.jpg" alt="Team Member">
-                        <h3>Alex Johnson</h3>
-                        <p>Founder & CEO</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/team2.jpg" alt="Team Member">
-                        <h3>Sarah Williams</h3>
-                        <p>Community Manager</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/team3.jpg" alt="Team Member">
-                        <h3>Michael Chen</h3>
-                        <p>Lead Developer</p>
-                    </div>
+            
+            <div class="form-group">
+                <label for="postImage">Add Image (Optional)</label>
+                <input type="file" id="postImage" accept="image/*">
+                <div class="image-preview">
+                    <img id="postImagePreview" src="#" alt="Image Preview" style="display: none;">
+                    <button type="button" id="removeImageBtn" class="btn btn-outline" style="display: none;">
+                        <i class="fas fa-times"></i> Remove Image
+                    </button>
                 </div>
             </div>
-
-            <div class="about-section cta-section">
-                <h2>Ready to join our community?</h2>
-                <p>Become part of something bigger. Share your knowledge, learn from others, and make lasting connections.</p>
-                <div class="cta-buttons">
-                    <a href="auth.html?mode=signup" class="btn btn-primary btn-large">Sign Up Now</a>
-                    <a href="posts.html" class="btn btn-outline btn-large">Browse Discussions</a>
-                </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Publish Post
+                </button>
+                <a href="posts.html" class="btn btn-outline">Cancel</a>
             </div>
-        </section>
+        </form>
     </main>
 
     <footer class="site-footer">
@@ -138,6 +112,6 @@
     <script src="js/utils.js"></script>
     <script src="js/firebase-config.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/about.js"></script>
+    <script src="js/create-post.js"></script>
 </body>
 </html>
