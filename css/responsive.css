@@ -1,0 +1,79 @@
+/* ===== Responsive Styles ===== */
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .main-nav {
+        order: 3;
+        width: 100%;
+        display: none;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .auth-buttons {
+        margin-left: auto;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .posts-grid, 
+    .members-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .posts-grid, 
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .auth-buttons {
+        gap: 5px;
+    }
+    
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
